@@ -4,10 +4,8 @@ import MenuItem from '../menu-item/menu-item.component';
 import './directory.styles.scss';
 
 class Directory extends React.Component {
-    constructor() {
-      super();
   
-      this.state = {
+      state = {
         sections: [
           {
             title: 'hats',
@@ -38,7 +36,6 @@ class Directory extends React.Component {
           }
         ]
       };
-    }
   
     render() {
       return (
