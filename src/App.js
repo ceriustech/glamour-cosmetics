@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className="wrapper">
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
     </div>
