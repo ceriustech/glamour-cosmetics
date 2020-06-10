@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
-  font-family: 'Open Sans Condensed';
+  font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
   padding: 20px 60px; 
+}
+
+a {
+  color: #6f6c70;
+  text-decoration: none;
 }
