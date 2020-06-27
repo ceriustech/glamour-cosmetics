@@ -14,6 +14,8 @@ const config = {
     measurementId: "G-EXGV2TB1SW"
   };
 
+  export const alertMe = () => alert("THIS WORKS!"); 
+
   firebase.initializeApp(config);
 
   export const auth = firebase.auth(); 
@@ -21,7 +23,8 @@ const config = {
   export const firestore = firebase.firestore();
 
   const provider = new firebase.auth.GoogleAuthProvider();
-  provider.setCustomParameters({prompt: 'select_account'});
-  export const signInWithGoogle = () => firebase.auth().signInWithPopup(provider); 
+  provider.setCustomParameters({ prompt: 'select_account' });
+  export const signInWithGoogle = () => firebase.auth().signInWithPopup(provider);
+  
 
   export default firebase; 

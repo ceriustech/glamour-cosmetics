@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { useState } from 'react'; 
 
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component'; 
@@ -13,17 +12,37 @@ import './App.css';
 
 
 
-function App() {
-  return (
-    <div className="wrapper">
-      <Header />
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route path='/shop' component={ShopPage} />
-        <Route path='/signin' component={SignInSignUpPage} />
-      </Switch>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    currentUser: null
+  }
+
+  // unsubscribeFromAuth = null;
+
+  // componentDidMount() {
+  //   this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+  //     this.setState({ currentUser: user }); 
+  //     console.log(user);
+  //   });
+  // }
+
+  // componentWillUnmount() {
+  //   this.unsubscribeFromAuth();
+  // }
+
+  render() {
+    return (
+      <div className="wrapper">
+        <Header currentUser={this.state.currentUser} />
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='/shop' component={ShopPage} />
+          <Route path='/signin' component={SignInSignUpPage} />
+        </Switch>
+      </div>
+    );
+  }
+
 }
 
 export default App;
