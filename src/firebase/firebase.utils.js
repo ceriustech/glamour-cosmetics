@@ -14,8 +14,6 @@ const config = {
     measurementId: "G-EXGV2TB1SW"
   };
 
-  export const alertMe = () => alert("THIS WORKS!"); 
-
   firebase.initializeApp(config);
 
   export const auth = firebase.auth(); 
